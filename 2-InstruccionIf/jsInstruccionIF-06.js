@@ -1,8 +1,14 @@
+/*
+Lopez Gonzalo Javier - DIV I
+InstruccionIF 06
+*/
+
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	var edad
 
+	edad = document.getElementById('txtIdEdad').value;
 
-
-}//FIN DE LA FUNCIÓN
+	edad < 13 ? alert("Es un niño") : edad >= 13  & edad <= 17 ? alert ("Es un adolescente") : alert("Es un adulto");
+}

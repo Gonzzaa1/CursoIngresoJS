@@ -19,6 +19,3 @@ function sumar()
 	alert("La suma es de " + suma);
 
 }
-
-//txtIdNumeroUno
-//txtIdNumeroDos 

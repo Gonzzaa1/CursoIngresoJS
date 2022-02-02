@@ -1,6 +1,17 @@
+/*
+Lopez Gonzalo Javier - DIV I
+InstruccionIF 09
+*/
+
+
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	var num;
+	var min = 1;
+	var max = 10;
 
-}//FIN DE LA FUNCIÓN
+	num = Math.round(Math.random() * (max - min) + min);
+
+	alert(num);
+
+}

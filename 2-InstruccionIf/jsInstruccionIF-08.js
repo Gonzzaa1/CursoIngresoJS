@@ -1,8 +1,17 @@
+/*
+Lopez Gonzalo Javier - DIV I
+InstruccionIF 08
+*/
+
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
-	
+	var edad;
+	var estadoCivil;
 
+	edad = document.getElementById('txtIdEdad').value;
 
-}//FIN DE LA FUNCIÓN
+	estadoCivil = document.getElementById('estadoCivil').value;
+
+	edad < 18 & estadoCivil != "soltero" ? null : alert("Es soltero y no es menor") ;
+}

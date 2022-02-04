@@ -12,8 +12,11 @@ function SacarResto()
 	var numDivisor;
 	var resultado;
 
-	numDividendo = parseInt(document.getElementById('txtIdNumeroDividendo').value);
-	numDivisor = parseInt(document.getElementById('txtIdNumeroDivisor').value);
+	numDividendo = document.getElementById('txtIdNumeroDividendo').value;
+	numDivisor = document.getElementById('txtIdNumeroDivisor').value;
+
+	numDividendo = parseInt(numDividendo);
+	numDivisor = parseInt(numDivisor);
 
 	resultado = numDividendo % numDivisor;
 

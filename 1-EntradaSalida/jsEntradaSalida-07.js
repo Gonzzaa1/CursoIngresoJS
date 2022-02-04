@@ -14,8 +14,11 @@ function sumar()
 	var numDos;
 	var resultado;
 
-	numUno = parseInt(document.getElementById('txtIdNumeroUno').value);
-	numDos = parseInt(document.getElementById('txtIdNumeroDos').value);
+	numUno = document.getElementById('txtIdNumeroUno').value;
+	numDos = document.getElementById('txtIdNumeroDos').value;
+
+	numUno = parseInt(numUno);
+	numDos = parseInt(numDos);
 
 	resultado = numUno +	numDos;
 
@@ -29,8 +32,11 @@ function restar()
 	var numDos;
 	var resultado;
 
-	numUno = parseInt(document.getElementById('txtIdNumeroUno').value);
-	numDos = parseInt(document.getElementById('txtIdNumeroDos').value);
+	numUno = document.getElementById('txtIdNumeroUno').value;
+	numDos = document.getElementById('txtIdNumeroDos').value;
+
+	numUno = parseInt(numUno);
+	numDos = parseInt(numDos);
 
 	resultado = numUno - numDos;
 
@@ -43,8 +49,11 @@ function multiplicar()
 	var numDos;
 	var resultado;
 
-	numUno = parseInt(document.getElementById('txtIdNumeroUno').value);
-	numDos = parseInt(document.getElementById('txtIdNumeroDos').value);
+	numUno = document.getElementById('txtIdNumeroUno').value;
+	numDos = document.getElementById('txtIdNumeroDos').value;
+
+	numUno = parseInt(numUno);
+	numDos = parseInt(numDos);
 
 	resultado = numUno * numDos;
 
@@ -57,8 +66,11 @@ function dividir()
 	var numDos;
 	var resultado;
 
-	numUno = parseInt(document.getElementById('txtIdNumeroUno').value);
-	numDos = parseInt(document.getElementById('txtIdNumeroDos').value);
+	numUno = document.getElementById('txtIdNumeroUno').value;
+	numDos = document.getElementById('txtIdNumeroDos').value;
+
+	numUno = parseInt(numUno);
+	numDos = parseInt(numDos);
 
 	resultado = numUno / numDos;
 

@@ -1,3 +1,15 @@
+/*
+Lopez Gonzalo Javier - DIV I
+Instruccion IF 10
+
+
+Al presionar el Botón, asignar una nota RANDOM al examen y mostrar:
+"EXCELENTE" para notas igual a 9 o 10,
+"APROBÓ" para notas mayores a 4,
+"Vamos, la proxima se puede" para notas menores a 4
+*/
+
+
 function mostrar()
 {
 	var nota;
@@ -7,7 +19,20 @@ function mostrar()
 	nota = Math.round(Math.random() * (max - min) + min);
 
 
-	nota >= 9 ? alert(nota + " EXCELENTE") : nota >= 4 ? alert(nota + " APROBO") : alert(nota + " Vamos la proxima se puede") ;
+	if(nota >= 9)
+	{
+		alert(nota + " = EXCELENTE")
+	}
+	else
+	{
+		if(nota >= 4)
+		{
+			alert(nota + " = APROBO")
+		}
+		else
+		{
+			alert(nota + " = Vamos la proxima se puede") ;
+		} 
+	}  
 
-	//alert(num);
 }

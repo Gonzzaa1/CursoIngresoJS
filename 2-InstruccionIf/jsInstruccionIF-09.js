@@ -1,6 +1,8 @@
 /*
 Lopez Gonzalo Javier - DIV I
-InstruccionIF 09
+Instruccion IF 09
+
+Al presionar el Botón, mostrar un número Random del 1 al 10 inclusive.
 */
 
 

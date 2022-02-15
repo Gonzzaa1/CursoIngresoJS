@@ -1,26 +1,35 @@
+/*
+Lopez Gonzalo Javier - DIV I
+Instruccion switch 7
+
+Al selecionar un destino , indicar el punto cardinal de nuestro pais en donde se encuentra Norte, Sur, Este u Oeste
+*/
+
+
 function mostrar()
 {
 	var destino;
+	var mensaje = "";
 
 	destino = document.getElementById('txtIdDestino').value;
 
 	switch(destino)
 	{
 		case "Bariloche":
-			alert("OESTE");
+			mensaje = "OESTE";
 			break;
 
 		case "Cataratas":
-			alert("NORTE");
+			mensaje = "NORTE";
 			break;
 
 		case "Mar del plata":
-			alert("ESTE");
+			mensaje = "ESTE";
 			break;
 
 		case "Ushuaia":
-			alert("SUR");
+			mensaje = "SUR";
 			break;
 	}
-
+	alert(mensaje);
 }

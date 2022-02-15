@@ -18,6 +18,8 @@ function CalcularPrecio ()
  	var canLamp;
     var empresa;
     var ingresosBrutos;
+    var precioFinal;
+    var descuento = 0;
     var precio = 35;
 
     canLamp = document.getElementById("txtIdCantidad").value;
@@ -25,68 +27,102 @@ function CalcularPrecio ()
     
     empresa = document.getElementById("Marca").value;
 
+    precioFinal = precio * canLamp;
+
     //A
     if(canLamp >= 6)
     {
-        precio = precio * canLamp * 0.5;
+        descuento = 50;
     }
     else
     {
        //B
         if(canLamp == 5)
         {
+            descuento = 30;
+
             if(empresa == "ArgentinaLuz")
             {
-                precio = precio * canLamp * 0.60;
-            }
-            else
-            {
-                precio = precio * canLamp * 0.70;
+                descuento = 40;
             }
         }
         //C
         if(canLamp == 4)
         {
+            descuento = 20;
+
             if(empresa == "ArgentinaLuz" || empresa == "FelipeLamparas")
             {
-                precio = precio * canLamp * 0.75;
-            }
-            else
-            {
-                precio = precio * canLamp * 0.80;
+                descuento = 25;
             }
         }
         //D
         if(canLamp == 3)
         {
+            descuento = 5;
+
             if(empresa == "ArgentinaLuz")
             {
-                precio = precio * canLamp * 0.85;
+                descuento = 15;
             }
             else
             {
                 if(empresa == "FelipeLamparas")
                 {
-                    precio = precio * canLamp * 0.90;
-                }
-                else
-                {
-                    precio = precio * canLamp * 0.95;
+                    descuento = 10;
                 }
             }
         }
-        if(canLamp < 3)
-        {
-            precio = precio * canLamp;
-        }
     }
-   //E
-    if(precio > 120)
+    precioFinal -= precioFinal * descuento /100;
+    //E
+    if(precioFinal > 120)
     {
-        ingresosBrutos = precio * 0.10;
-        precio = precio + ingresosBrutos;
-
+        ingresosBrutos = precioFinal * 0.10;
+        precioFinal += ingresosBrutos;
         alert("IIBB : Usted Pago $" + ingresosBrutos.toFixed(2));
     }
-    document.getElementById("txtIdprecioDescuento").value = precio.toFixed(2);
+   
+    document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
+
+   
 }
+/*
+    switch(canLamp)
+    {
+        case 1:
+        case 2:
+            descuento;
+            break;
+        case 3:
+            descuento = 5;
+            if(empresa == "ArgentinaLuz")
+            {
+                descuento = 15;
+            }
+            else
+            {
+                if(empresa == "FelipeLamparas")
+                {
+                    descuento = 10;
+                }
+            }
+        break; 
+        case  4:
+            descuento = 20;
+            if(empresa == "ArgentinaLuz" || empresa == "FelipeLamparas")
+            {
+                descuento = 25;
+            }
+            break; 
+        case  5:
+            descuento = 30;
+            if(empresa == "ArgentinaLuz")
+            {
+                descuento = 40;
+            }
+            break;
+        default:
+            descuento = 50;
+    }
+    */

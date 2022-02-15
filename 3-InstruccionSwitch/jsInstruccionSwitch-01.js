@@ -1,24 +1,30 @@
+/*
+Lopez Gonzalo Javier - DIV I
+Instruccion switch 1
+*/
+
+
 function mostrar()
 {
-	
 	var meses;
+	var mensaje = "";
 
 	meses = document.getElementById("txtIdMes").value;
 
 	switch(meses)
 	{
 		case "Enero":
-			alert("Que comiences bien el año!!!");
+			mensaje = "Que comiences bien el año!!!";
 			break;
 		case "Marzo":
-			alert("A clases!!!");
+			mensaje = "A clases!!!";
 			break;
 		case "Julio":
-			alert("Se vienen las vacaciones!!!");
+			mensaje = "Se vienen las vacaciones!!!";
 			break;
 		case "Diciembre":
-			alert("Felices fiestas!!!");
+			mensaje = "Felices fiestas!!!";
 			break;		
 	}
-
+	alert(mensaje);
 }

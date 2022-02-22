@@ -9,7 +9,7 @@ Al selecionar un destino , indicar el punto cardinal de nuestro pais en donde se
 function mostrar()
 {
 	var destino;
-	var mensaje = "";
+	var mensaje;
 
 	destino = document.getElementById('txtIdDestino').value;
 

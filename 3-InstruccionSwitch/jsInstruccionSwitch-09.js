@@ -13,142 +13,77 @@ function mostrar()
 {
 	var estacion ;
 	var destino;
-	var descuento = 0;
-	var aumento = 0;
+	var porciento = 0;
 	var precioFinal;
 	var tarifa = 15000;
 	
 	estacion = document.getElementById("txtIdEstacion").value;
 	destino = document.getElementById("txtIdDestino").value;
 
-	
-
 	switch(estacion)
 	{
 		case "Invierno":
-			if(destino  == "Bariloche")
+			switch(destino)
 			{
-				aumento = 20;
-			}
-			else
-			{
-				if(destino == "Mar del plata")
-				{
-					descuento = 20;
-				}
-				else
-				{
-					descuento = 10
-				}
+				case "Bariloche":
+					porciento = 20;
+					break;
+				case "Mar de plata":
+					porciento = -20;
+					break;
+				default:
+					porciento = -10;	
 			}
 			break;
 		case "Verano":
-			if(destino  == "Bariloche")
+			switch(destino)
 			{
-				descuento = 20;
-			}
-			else
-			{
-				if(destino == "Mar del plata")
-				{
-					aumento = 20;
-				}
-				else
-				{
-					descuento = 10
-				}
+				case "Bariloche":
+					porciento = -20;
+					break;
+				case "Mar de plata":
+					porciento = 20;
+					break;
+				default:
+					porciento = -10;	
 			}
 			break;
-		case "Otoño":
-		case "Primavera":
+		default:
 			if( destino != "Cordoba")
 			{
-				aumento = 10;
+				porciento = 10;
 			}
-			break;
 	}
 
-	if( aumento != 0)
-	{
-		precioFinal = tarifa + tarifa * aumento / 100;
-	}
-	else
-	{
-		precioFinal = tarifa;
+	precioFinal = tarifa + tarifa * porciento / 100;
 
-		if ( descuento != 0)
-		{
-			precioFinal = tarifa - tarifa * descuento / 100;
-		}
-	}
 	mensaje = "El precio es de $" + precioFinal;
 	alert(mensaje);
 }
-
-/*
-	var estacion ;
-	var destino;
-	var tarifa = 15000;
-	var porcentaje;
 	
-	estacion = document.getElementById("txtIdEstacion").value;
-	destino = document.getElementById("txtIdDestino").value;
-
+/*if(destino  == "Bariloche")
+{
+	porciento = -20;
+}
+else
+{
+	porciento = -10;
 	
-
-	switch(estacion)
+	if(destino == "Mar del plata")
 	{
-		case "Invierno":
-			switch(destino)
-				{
-					case "Bariloche":
-						porcentaje = 20;
-						precio = tarifa + tarifa * porcentaje / 100;
-						break;
-					case "Cataratas":
-					case "Cordoba":
-						porcentaje = 10;
-						precio = tarifa - tarifa * porcentaje / 100;	
-						break;
-					case "Mar del plata":
-						porcentaje = 20;
-						precio = tarifa - tarifa * porcentaje / 100;
-						break;
-				}
-		break;
-		case "Verano":
-			switch(destino)
-				{
-					case "Bariloche":
-						porcentaje = 20;
-						precio = tarifa - tarifa * porcentaje / 100;
-						break;
-					case "Cataratas":
-					case "Cordoba":
-						porcentaje = 10;
-						precio = tarifa + tarifa * porcentaje / 100;	
-						break;
-					case "Mar del plata":
-						porcentaje = 20;
-						precio = tarifa - tarifa * porcentaje / 100;
-						break;
-				}
-			break;
-		case "Otoño":
-		case "Primavera":
-			switch(destino)
-				{
-					case "Bariloche":
-					case "Cataratas":
-					case "Mar del plata":
-						porcentaje = 10;
-						precio = tarifa + tarifa * porcentaje / 100;	
-						break;
-					case "Cordoba":
-						precio = tarifa;
-						break;
-				}
-			break;
+		porciento = 20;
 	}
-	alert(precio);
-*/
+}*/
+/*if(destino  == "Bariloche")
+{
+	porciento = 20;
+}
+else
+{
+	porciento = -10;
+
+	if(destino == "Mar del plata")
+	{
+		porciento = -20;
+	}
+}*/
